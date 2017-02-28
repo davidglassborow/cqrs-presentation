@@ -32,16 +32,16 @@
 
 ### Advantages
 
-- Optimise reads via quries, database projections, search engines, etc.
+- Optimise reads via queries, database projections, search engines, etc.
 - Security e.g. read only connection string for queries
-- Use Domain Model only for writes, joins for reads, seperate types
+- Use Domain Model only for writes, SQL joins for reads, seperate types
 
 ---
 
 ### Disadvantages
 
 - Complexity over simple SQL data access
-- What about things like `Stack.pop()`` ?
+- What about things like `Stack.pop()` ?
 
 
 ***
@@ -51,8 +51,8 @@
 ![ES Diagram](images/turtle-event-source.png)
 
 - Immutable append only store
-- Snapshops for performance
 - Define changes in business terms (e.g. ChangeOfAddress) not SQL
+- Snapshops for performance
 - Java [LMAX disrupter](https://lmax-exchange.github.io/disruptor/)
 
 
@@ -84,8 +84,6 @@
 - Command handler does minimal work, downstream processors
 - Combine, project, fold streams
 
-    IObservable
-
 ---
 
 
@@ -98,6 +96,16 @@
 
 - EventStore javascript projections
 - Eventually consistent reads (e.g. via database)
+- Rx, RxJava, RxJS
+- Enumerable dual, sync pull vs async push
+	
+	
+	eventSouce
+	|> Observable.filter ((>) 2)
+	|> Observable.map (fun x -> x*2)
+	|> Observable.merge otherEvents
+	|> Observable.subscribe
+
 
 ---
 
