@@ -10,7 +10,7 @@
 
 ### 3 slightly different things
 
-- CQRS: Command Query Responsibilty Seperation
+- CQRS: Command Query Responsibilty Separation
 - ES: Event Sources
 - FRP: Functional Reactive Programming
 
@@ -18,9 +18,9 @@
 
 ### CQRS
 
-- Seperate Reads (Queries) from Writes (Commands)
+- Separate Reads (Queries) from Writes (Commands)
 - Reads vs Writes to system rarely the same rate, decouple them
-- Also called [SQS - Command-query seperation](https://en.wikipedia.org/wiki/Command–query_separation)
+- Also called [SQS - Command-query separation](https://en.wikipedia.org/wiki/Command–query_separation)
 - Queries: return state and are pure
 - Command: change state and returns unit
 
@@ -34,7 +34,7 @@
 
 - Optimise reads via queries, database projections, search engines, etc.
 - Security e.g. read only connection string for queries
-- Use Domain Model only for writes, SQL joins for reads, seperate types
+- Use Domain Model only for writes, SQL joins for reads, separate types
 
 ---
 
