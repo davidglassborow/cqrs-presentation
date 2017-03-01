@@ -53,7 +53,7 @@
 - Immutable append only store
 - Define changes in business terms (e.g. ChangeOfAddress) not SQL
 - Snapshops for performance
-- Java [LMAX disrupter](https://lmax-exchange.github.io/disruptor/)
+- Java [LMAX disruptor](https://lmax-exchange.github.io/disruptor/)
 
 
 ---
