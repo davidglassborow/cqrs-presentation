@@ -18,7 +18,7 @@
 
 ### CQRS
 
-- Seperate Reads (Queries) from Writes (Commands)
+- Separate Reads (Queries) from Writes (Commands)
 - Reads vs Writes to system rarely the same rate, decouple them
 - Also called [SQS - Command-query seperation](https://en.wikipedia.org/wiki/Command–query_separation)
 - Queries: return state and are pure
